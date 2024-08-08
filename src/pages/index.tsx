@@ -35,8 +35,8 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full min-h-screen">
+    <div className="min-h-screen flex items-center justify-center bg-primary">
+      <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full min-h-screen flex flex-col justify-center">
         <div className='flex flec-row gap-4'>
           <h1 className="text-2xl text-secondary font-semibold mb-6">
             Calcule seu <strong className='font-bold text-primary'> Gasto Calórico Diário (EER)</strong>
@@ -119,9 +119,11 @@ const Home = () => {
           </button>
         </form>
         {result !== null && (
-          <div className="mt-6 text-center flex flex-col gap-4">
+          <div className="mt-6 text-center flex flex-col gap-4 justify-center items-center">
             <h2 className="text-xl font-semibold text-secondary">Sua necessidade energética diária (EER) é:</h2>
-            <p className="text-2xl text-secondary">{result.toFixed(2)} kcal</p>
+            <div className='bg-greenColor rounded-xl p-4 w-3/5 flex flex-col align-center'>
+              <p className="text-2xl text-textColor font-semibold">{result.toFixed(2)} kcal</p>
+            </div>
           </div>
         )}
       </div>
