@@ -7,8 +7,8 @@ const Home = () => {
     idade: "",
     peso: "",
     altura: "",
-    sexo: "1",
-    NAF: "1"
+    sexo: "",
+    NAF: ""
   });
   const [result, setResult] = useState<number | null>(null);
 
@@ -23,6 +23,11 @@ const Home = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const { idade, peso, altura, sexo, NAF } = formData;
+
+    if (sexo === "" || NAF === "") {
+      alert("Por favor, selecione o sexo e o nível de atividade física.");
+      return;
+    }
 
     const eer = calcularEER({
       idade: parseInt(idade),
@@ -92,6 +97,7 @@ const Home = () => {
                 className="w-full px-3 py-2 border border-gray-300 rounded text-secondary"
                 required
               >
+                <option value="" disabled></option>
                 <option value="1">Homem</option>
                 <option value="2">Mulher</option>
               </select>
@@ -106,6 +112,7 @@ const Home = () => {
               className="w-full px-3 py-2 border border-gray-300 rounded text-secondary"
               required
             >
+              <option value="" disabled></option>
               <option value="1">Sedentário</option>
               <option value="2">Pouco Ativo</option>
               <option value="3">Ativo</option>
