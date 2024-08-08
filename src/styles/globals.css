@@ -7,6 +7,8 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --color-primary: #4EB075;
+  --color-textColor: #377550;
+  --color-greenColor: #d5fce4;
   --color-secondary: #0E2432;
   --color-tertiary: #FFF;
 }
@@ -38,6 +40,9 @@ body {
 .bg-primary {
   background-color: var(--color-primary);
 }
+.bg-greenColor {
+  background-color: var(--color-greenColor);
+}
 
 .text-secondary {
   color: var(--color-secondary);
@@ -45,4 +50,8 @@ body {
 
 .text-primary {
   color: var(--color-primary);
+}
+
+.text-textColor {
+  color: var(--color-textColor);
 }
