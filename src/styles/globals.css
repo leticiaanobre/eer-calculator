@@ -10,6 +10,7 @@
   --color-textColor: #377550;
   --color-greenColor: #d5fce4;
   --color-secondary: #0E2432;
+  --color-gray: #525c63;
   --color-tertiary: #FFF;
 }
 
@@ -54,4 +55,8 @@ body {
 
 .text-textColor {
   color: var(--color-textColor);
+}
+
+.text-gray {
+  color: var(--color-gray);
 }

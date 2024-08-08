@@ -48,7 +48,7 @@ const Home = () => {
         <form onSubmit={handleSubmit}>
           <div className='flex flex-row justify-between gap-6'>
             <div className="mb-4">
-              <label className="block mb-2 text-secondary">Idade</label>
+              <label className="block mb-2 text-gray">Idade</label>
               <input
                 type="number"
                 name="idade"
@@ -59,7 +59,7 @@ const Home = () => {
               />
             </div>
             <div className="mb-4">
-              <label className="block mb-2 text-secondary">Peso (kg)</label>
+              <label className="block mb-2 text-gray">Peso (kg)</label>
               <input
                 type="number"
                 name="peso"
@@ -72,7 +72,7 @@ const Home = () => {
           </div>
           <div className='flex flex-row justify-between gap-6'>
             <div className="mb-4 w-full">
-              <label className="block mb-2 text-secondary">Altura (m)</label>
+              <label className="block mb-2 text-gray">Altura (m)</label>
               <input
                 type="number"
                 name="altura"
@@ -83,7 +83,7 @@ const Home = () => {
               />
             </div>
             <div className="mb-4 w-full">
-              <label className="block mb-2 text-secondary">Sexo</label>
+              <label className="block mb-2 text-gray">Sexo</label>
               <select
                 name="sexo"
                 value={formData.sexo}
@@ -97,7 +97,7 @@ const Home = () => {
             </div>
           </div>
           <div className="mb-4">
-            <label className="block mb-2 text-secondary">Nível de Atividade Física</label>
+            <label className="block mb-2 text-gray">Nível de Atividade Física</label>
             <select
               name="NAF"
               value={formData.NAF}
@@ -120,7 +120,7 @@ const Home = () => {
         </form>
         {result !== null && (
           <div className="mt-6 text-center flex flex-col gap-4 justify-center items-center">
-            <h2 className="text-xl font-semibold text-secondary">Sua necessidade energética diária (EER) é:</h2>
+            <h2 className="text-xl font-normal text-gray">Sua necessidade energética diária (EER) é:</h2>
             <div className='bg-greenColor rounded-xl p-4 w-3/5 flex flex-col align-center'>
               <p className="text-2xl text-textColor font-semibold">{result.toFixed(2)} kcal</p>
             </div>
