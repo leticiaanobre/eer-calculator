@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Activity, HeartPulse } from 'lucide-react';
-import { UserData } from "./utils/UserData";
+import { UserData } from "../utils/UserData";
 
 const Home = () => {
   const [formData, setFormData] = useState({
