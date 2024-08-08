@@ -36,28 +36,28 @@ const Home = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full min-h-screen">
-        <h1 className="text-2xl font-bold mb-6 text-gray-900">Gasto Calórico Diário</h1>
+        <h1 className="text-2xl text-secondary font-semibold mb-6">Calcule seu <strong className='font-bold text-primary'> Gasto Calórico Diário (EER)</strong></h1>
         <form onSubmit={handleSubmit}>
           <div className='flex flex-row justify-between gap-6'>
             <div className="mb-4">
-              <label className="block mb-2 text-gray-700">Idade</label>
+              <label className="block mb-2 text-secondary">Idade</label>
               <input
                 type="number"
                 name="idade"
                 value={formData.idade}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded text-gray-900"
+                className="w-full px-3 py-2 border border-gray-300 rounded text-secondary"
                 required
               />
             </div>
             <div className="mb-4">
-              <label className="block mb-2 text-gray-700">Peso (kg)</label>
+              <label className="block mb-2 text-secondary">Peso (kg)</label>
               <input
                 type="number"
                 name="peso"
                 value={formData.peso}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded text-gray-900"
+                className="w-full px-3 py-2 border border-gray-300 rounded text-secondary"
                 required
               />
           </div>
@@ -65,23 +65,23 @@ const Home = () => {
           <div className='flex flex-row justify-between gap-6'>
 
             <div className="mb-4 w-full">
-              <label className="block mb-2 text-gray-700">Altura (m)</label>
+              <label className="block mb-2 text-secondary">Altura (m)</label>
               <input
                 type="number"
                 name="altura"
                 value={formData.altura}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded text-gray-900"
+                className="w-full px-3 py-2 border border-gray-300 rounded text-secondary"
                 required
               />
             </div>
             <div className="mb-4 w-full">
-              <label className="block mb-2 text-gray-700">Sexo</label>
+              <label className="block mb-2 text-secondary">Sexo</label>
               <select
                 name="sexo"
                 value={formData.sexo}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded text-gray-900"
+                className="w-full px-3 py-2 border border-gray-300 rounded text-secondary"
                 required
               >
                 <option value="1">Homem</option>
@@ -90,12 +90,12 @@ const Home = () => {
             </div>
           </div>
           <div className="mb-4">
-            <label className="block mb-2 text-gray-700">Nível de Atividade Física</label>
+            <label className="block mb-2 text-secondary">Nível de Atividade Física</label>
             <select
               name="NAF"
               value={formData.NAF}
               onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded text-gray-900"
+              className="w-full px-3 py-2 border border-gray-300 rounded text-secondary"
               required
             >
               <option value="1">Sedentário</option>
@@ -106,15 +106,15 @@ const Home = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition duration-200"
+            className="w-full bg-primary text-white py-2 rounded hover:bg-blue-600 transition duration-200"
           >
             Calcular
           </button>
         </form>
         {result !== null && (
-          <div className="mt-6 text-center">
-            <h2 className="text-xl font-bold text-gray-900">Sua necessidade energética diária (EER) é:</h2>
-            <p className="text-2xl text-gray-900">{result.toFixed(2)} kcal</p>
+          <div className="mt-6 text-center flex flex-col gap-4">
+            <h2 className="text-xl font-semibold text-secondary">Sua necessidade energética diária (EER) é:</h2>
+            <p className="text-2xl text-secondary">{result.toFixed(2)} kcal</p>
           </div>
         )}
       </div>
