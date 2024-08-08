@@ -38,51 +38,56 @@ const Home = () => {
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full min-h-screen">
         <h1 className="text-2xl font-bold mb-6 text-gray-900">Gasto Calórico Diário</h1>
         <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label className="block mb-2 text-gray-700">Idade</label>
-            <input
-              type="number"
-              name="idade"
-              value={formData.idade}
-              onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded text-gray-900"
-              required
-            />
+          <div className='flex flex-row justify-between gap-6'>
+            <div className="mb-4">
+              <label className="block mb-2 text-gray-700">Idade</label>
+              <input
+                type="number"
+                name="idade"
+                value={formData.idade}
+                onChange={handleChange}
+                className="w-full px-3 py-2 border border-gray-300 rounded text-gray-900"
+                required
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block mb-2 text-gray-700">Peso (kg)</label>
+              <input
+                type="number"
+                name="peso"
+                value={formData.peso}
+                onChange={handleChange}
+                className="w-full px-3 py-2 border border-gray-300 rounded text-gray-900"
+                required
+              />
           </div>
-          <div className="mb-4">
-            <label className="block mb-2 text-gray-700">Peso (kg)</label>
-            <input
-              type="number"
-              name="peso"
-              value={formData.peso}
-              onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded text-gray-900"
-              required
-            />
           </div>
-          <div className="mb-4">
-            <label className="block mb-2 text-gray-700">Altura (m)</label>
-            <input
-              type="number"
-              name="altura"
-              value={formData.altura}
-              onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded text-gray-900"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block mb-2 text-gray-700">Sexo</label>
-            <select
-              name="sexo"
-              value={formData.sexo}
-              onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded text-gray-900"
-              required
-            >
-              <option value="1">Homem</option>
-              <option value="2">Mulher</option>
-            </select>
+          <div className='flex flex-row justify-between gap-6'>
+
+            <div className="mb-4 w-full">
+              <label className="block mb-2 text-gray-700">Altura (m)</label>
+              <input
+                type="number"
+                name="altura"
+                value={formData.altura}
+                onChange={handleChange}
+                className="w-full px-3 py-2 border border-gray-300 rounded text-gray-900"
+                required
+              />
+            </div>
+            <div className="mb-4 w-full">
+              <label className="block mb-2 text-gray-700">Sexo</label>
+              <select
+                name="sexo"
+                value={formData.sexo}
+                onChange={handleChange}
+                className="w-full px-3 py-2 border border-gray-300 rounded text-gray-900"
+                required
+              >
+                <option value="1">Homem</option>
+                <option value="2">Mulher</option>
+              </select>
+            </div>
           </div>
           <div className="mb-4">
             <label className="block mb-2 text-gray-700">Nível de Atividade Física</label>
