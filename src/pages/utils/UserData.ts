@@ -25,3 +25,6 @@ interface UserData {
     return EER;
   }
   
+export { calcularEER };
+    export type { UserData };
+  
