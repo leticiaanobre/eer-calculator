@@ -9,8 +9,6 @@ This is a responsive web application built with Next.js, TypeScript, and Tailwin
 - [Installation](#installation)
 - [Usage](#usage)
 - [Calculations](#calculations)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
