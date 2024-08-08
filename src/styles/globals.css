@@ -36,33 +36,33 @@ select {
   appearance: none; /* Remove a aparência padrão do navegador */
   -webkit-appearance: none; /* Remove a aparência padrão no Safari */
   -moz-appearance: none; /* Remove a aparência padrão no Firefox */
-  padding: 8px 12px; /* Ajusta o padding interno */
-  background-color: #ffffff; /* Define uma cor de fundo clara */
-  border: 1px solid #ccc; /* Define uma borda */
-  border-radius: 4px; /* Define cantos arredondados */
-  font-size: 16px; /* Ajusta o tamanho da fonte */
-  color: #333; /* Define a cor do texto */
-  width: 100%; /* Define a largura como 100% do contêiner */
-  height: 40px; /* Ajusta a altura */
+  padding: 8px 12px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333; 
+  width: 100%; 
+  height: 40px; 
 }
 
 select:focus {
-  outline: none; /* Remove o contorno padrão ao focar */
-  border-color: var(--color-primary); /* Define a cor da borda ao focar */
-  box-shadow: 0 0 0 2px rgba(78, 176, 117, 0.2); /* Adiciona um efeito de sombra */
+  outline: none;
+  border-color: var(--color-primary); 
+  box-shadow: 0 0 0 2px rgba(78, 176, 117, 0.2); 
 }
 
 @supports (-webkit-touch-callout: none) {
   select {
-    background-color: #ffffff; /* Certifica-se de que a cor de fundo é branca */
-    border-radius: 4px; /* Define cantos arredondados */
-    border: 1px solid #ccc; /* Define uma borda */
-    height: 40px; /* Ajusta a altura */
+    background-color: #ffffff; 
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    height: 40px; 
   }
 
   select:focus {
-    border-color: var(--color-primary); /* Define a cor da borda ao focar */
-    box-shadow: 0 0 0 2px rgba(78, 176, 117, 0.2); /* Adiciona um efeito de sombra */
+    border-color: var(--color-primary); 
+    box-shadow: 0 0 0 2px rgba(78, 176, 117, 0.2); 
   }
 }
 
