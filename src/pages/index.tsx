@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Activity, HeartPulse } from 'lucide-react';
 
 const Home = () => {
   const [formData, setFormData] = useState({
@@ -36,7 +37,14 @@ const Home = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full min-h-screen">
-        <h1 className="text-2xl text-secondary font-semibold mb-6">Calcule seu <strong className='font-bold text-primary'> Gasto Calórico Diário (EER)</strong></h1>
+        <div className='flex flec-row gap-4'>
+          <h1 className="text-2xl text-secondary font-semibold mb-6">
+            Calcule seu <strong className='font-bold text-primary'> Gasto Calórico Diário (EER)</strong>
+          </h1>
+          <div className="flex justify-center mb-6">
+            <Activity className="text-primary" strokeWidth={1.5} size={80} />
+          </div>
+        </div>
         <form onSubmit={handleSubmit}>
           <div className='flex flex-row justify-between gap-6'>
             <div className="mb-4">
@@ -60,10 +68,9 @@ const Home = () => {
                 className="w-full px-3 py-2 border border-gray-300 rounded text-secondary"
                 required
               />
-          </div>
+            </div>
           </div>
           <div className='flex flex-row justify-between gap-6'>
-
             <div className="mb-4 w-full">
               <label className="block mb-2 text-secondary">Altura (m)</label>
               <input
@@ -106,7 +113,7 @@ const Home = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-primary text-white py-2 rounded hover:bg-blue-600 transition duration-200"
+            className="w-full bg-primary text-white py-2 rounded hover:bg-green-600 transition duration-200"
           >
             Calcular
           </button>
