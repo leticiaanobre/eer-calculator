@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from "react";
-import { Activity, HeartPulse } from 'lucide-react';
+import { Activity, ArrowRight, HeartPulse } from 'lucide-react';
 import { UserData } from "../../utils/UserData";
 
 const EerCalculator = () => {
@@ -149,7 +149,8 @@ const EerCalculator = () => {
         {result !== null && (
           <div className="mt-6 text-center flex flex-col gap-4 justify-center items-center">
             <h2 className="text-xl font-normal text-gray">Sua necessidade energética diária (EER) é:</h2>
-            <div className='bg-greenColor rounded-xl p-4 w-3/5 flex flex-col align-center'>
+            <div className='bg-greenColor rounded-xl p-4 w-3/5 flex flex-row align-center items-center gap-2'>
+                <ArrowRight className='text-textColor'/>
               <p className="text-2xl text-textColor font-semibold">{result.toFixed(2)} kcal</p>
             </div>
           </div>
